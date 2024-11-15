@@ -25,7 +25,7 @@ exports.config = {
       waitForTimeout: 60000
     }
   },
-  //     keepBrowserState: true,
+     
   //     desiredCapabilities: {
   //       chromeOptions: {
   //         args: [
@@ -48,10 +48,12 @@ exports.config = {
   bootstrap: null,
   timeout: null,
   teardown: null,
+  keepBrowserState: true,
   hooks: [],
   gherkin: {
     features: './features/*.feature',
     steps: [
+      './step_definitions/01_loginInvalid.js',
       './step_definitions/02_loginValid.js',
       './step_definitions/03_newVacancies.js',
       './step_definitions/04_logout.js'

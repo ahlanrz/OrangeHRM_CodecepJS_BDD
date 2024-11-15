@@ -10,7 +10,7 @@ When('I click button Vancancies', () => {
     I.wait(2);
     I.click("//a[normalize-space(text())='Vacancies']");
 });
-
+ ``
 When('I click button add', () => {
     I.wait(2);
     I.click("//button[normalize-space()='Add']");
@@ -70,6 +70,4 @@ Then ('new vacancy successfully added', () => {
     I.see('Successfully Saved'); 
     I.wait(2);
     I.saveScreenshot('addVacancies.png');
-
-    I.seeCurrentUrlEquals
 });
